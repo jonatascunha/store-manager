@@ -1,7 +1,8 @@
-package br.com.youtube.customer.service.mapper;
+package br.com.aula.storemanager.service.mapper;
 
-import br.com.youtube.customer.model.request.ProductRequestDTO;
-import br.com.youtube.customer.persistence.entity.Product;
+
+import br.com.aula.storemanager.model.request.ProductRequestDTO;
+import br.com.aula.storemanager.persistence.entity.Product;
 import org.springframework.stereotype.Component;
 
 @Component

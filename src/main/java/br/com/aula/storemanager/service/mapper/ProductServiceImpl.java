@@ -1,10 +1,9 @@
-package br.com.youtube.customer.service;
+package br.com.aula.storemanager.service.mapper;
 
-import br.com.youtube.customer.model.request.ProductRequestDTO;
-import br.com.youtube.customer.model.response.ProductResponseDTO;
-import br.com.youtube.customer.persistence.entity.Product;
-import br.com.youtube.customer.persistence.repository.ProductRepository;
-import br.com.youtube.customer.service.mapper.Mapper;
+import br.com.aula.storemanager.model.request.ProductRequestDTO;
+import br.com.aula.storemanager.model.response.ProductResponseDTO;
+import br.com.aula.storemanager.persistence.entity.Product;
+import br.com.aula.storemanager.persistence.repository.ProductRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

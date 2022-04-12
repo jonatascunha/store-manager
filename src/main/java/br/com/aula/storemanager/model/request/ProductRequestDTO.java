@@ -1,4 +1,4 @@
-package br.com.youtube.customer.model.request;
+package br.com.aula.storemanager.model.request;
 
 public class ProductRequestDTO {
     private long id;

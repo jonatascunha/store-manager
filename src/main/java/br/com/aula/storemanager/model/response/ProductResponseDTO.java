@@ -1,4 +1,4 @@
-package br.com.youtube.customer.model.response;
+package br.com.aula.storemanager.model.response;
 
 public class ProductResponseDTO {
     private long id;

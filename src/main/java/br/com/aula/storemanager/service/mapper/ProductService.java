@@ -1,7 +1,8 @@
-package br.com.youtube.customer.service;
+package br.com.aula.storemanager.service.mapper;
 
-import br.com.youtube.customer.model.request.ProductRequestDTO;
-import br.com.youtube.customer.model.response.ProductResponseDTO;
+
+import br.com.aula.storemanager.model.request.ProductRequestDTO;
+import br.com.aula.storemanager.model.response.ProductResponseDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

@@ -1,4 +1,4 @@
-package br.com.youtube.customer.persistence.entity;
+package br.com.aula.storemanager.persistence.entity;
 
 import javax.persistence.*;
 import java.util.function.Function;
