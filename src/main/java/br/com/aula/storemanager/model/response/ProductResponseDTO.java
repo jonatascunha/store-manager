@@ -1,7 +1,6 @@
-package br.com.aula.storemanager.dto;
+package br.com.aula.storemanager.model.response;
 
 public class ProductResponseDTO {
-
     private long id;
     private String name;
     private double salesPrice;

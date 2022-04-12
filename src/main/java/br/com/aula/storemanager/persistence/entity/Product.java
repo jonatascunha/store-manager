@@ -1,5 +1,7 @@
-package br.com.aula.storemanager.model;
+package br.com.aula.storemanager.persistence.entity;
+
 import javax.persistence.*;
+import java.util.function.Function;
 
 @Entity
 @Table (name = "product")
@@ -33,6 +35,10 @@ public class Product {
 
     @Column(name = "productType", nullable = false)
     private String productType;
+
+    public <R> R map(Function<Product, R> func) {
+        return func.apply(this);
+    }
 
     public long getId() {
         return id;

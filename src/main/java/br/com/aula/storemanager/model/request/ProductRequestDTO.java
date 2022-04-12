@@ -1,7 +1,6 @@
-package br.com.aula.storemanager.dto;
+package br.com.aula.storemanager.model.request;
 
 public class ProductRequestDTO {
-
     private long id;
     private String name;
     private double salesPrice;
@@ -11,6 +10,7 @@ public class ProductRequestDTO {
     private String vendorDescription;
     private String quantityProduct;
     private String productType;
+
 
     public long getId() {
         return id;

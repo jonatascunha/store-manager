@@ -6,8 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class StoreManagerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(StoreManagerApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(StoreManagerApplication.class, args);
+    }
+
+
 
 }
