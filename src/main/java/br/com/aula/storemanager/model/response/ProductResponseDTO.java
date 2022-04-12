@@ -1,37 +1,14 @@
-package br.com.aula.storemanager.model;
-import javax.persistence.*;
+package br.com.youtube.customer.model.response;
 
-@Entity
-@Table (name = "product")
-public class Product {
-
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name = "id", nullable = false)
+public class ProductResponseDTO {
     private long id;
-
-    @Column(name = "name", nullable = false)
     private String name;
-
-    @Column(name = "salesPrice", nullable = false)
     private double salesPrice;
-
-    @Column(name = "code", nullable = false)
     private double costPrice;
-
-    @Column(name = "description")
     private String description;
-
-    @Column(name = "brand", nullable = false)
     private String brand;
-
-    @Column(name = "vendorDescription", nullable = false)
     private String vendorDescription;
-
-    @Column(name = "quantityProduct", nullable = false)
     private String quantityProduct;
-
-    @Column(name = "productType", nullable = false)
     private String productType;
 
     public long getId() {

@@ -1,16 +1,44 @@
-package br.com.aula.storemanager.dto;
+package br.com.youtube.customer.persistence.entity;
 
-public class ProductRequestDTO {
+import javax.persistence.*;
+import java.util.function.Function;
 
+@Entity
+@Table (name = "product")
+public class Product {
+
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @Column (name = "id", nullable = false)
     private long id;
+
+    @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name = "salesPrice", nullable = false)
     private double salesPrice;
+
+    @Column(name = "code", nullable = false)
     private double costPrice;
+
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "brand", nullable = false)
     private String brand;
+
+    @Column(name = "vendorDescription", nullable = false)
     private String vendorDescription;
+
+    @Column(name = "quantityProduct", nullable = false)
     private String quantityProduct;
+
+    @Column(name = "productType", nullable = false)
     private String productType;
+
+    public <R> R map(Function<Product, R> func) {
+        return func.apply(this);
+    }
 
     public long getId() {
         return id;

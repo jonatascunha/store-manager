@@ -1,13 +1,14 @@
-package br.com.aula.storemanager;
+package br.com.youtube.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class StoreManagerApplication {
+public class ProductApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StoreManagerApplication.class, args);
+		SpringApplication.run(ProductApplication.class, args);
 	}
 
 }
