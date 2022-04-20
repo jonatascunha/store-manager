@@ -3,6 +3,7 @@ package br.com.aula.storemanager.ws.v1;
 import br.com.aula.storemanager.model.request.ProductRequestDTO;
 import br.com.aula.storemanager.model.response.ProductResponseDTO;
 import br.com.aula.storemanager.service.mapper.ProductService;
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +12,14 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/v1")
 public class ProductController {
+    @Autowired
+    private ModelMapper modelMapper;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductController.class);
 
@@ -46,14 +50,22 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProductResponseDTO> get(@PathVariable("id") Long id) {
+    public ResponseEntity<ProductResponseDTO> getByid(@PathVariable("id") Long id) {
         LOGGER.info("Iniciando a busca pelo registro");
-        Optional<ProductResponseDTO> productResponseDTO = productService.get(id);
+        Optional<ProductResponseDTO> productResponseDTO = productService.getByid(id);
         if (!productResponseDTO.isPresent()) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(productResponseDTO.get());
     }
+
+    @GetMapping("/price")
+    public ResponseEntity<List<ProductResponseDTO>> getByPrice(@RequestParam(name = "price") double price) {
+        LOGGER.info("Iniciando a busca pelo registro");
+        List<ProductResponseDTO> productResponseDTO = productService.getByPriceLessThan(price);
+        return ResponseEntity.ok(productResponseDTO);
+    }
+
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable("id") Long id) {

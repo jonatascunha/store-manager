@@ -6,6 +6,7 @@ import br.com.aula.storemanager.model.response.ProductResponseDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface ProductService {
@@ -16,7 +17,9 @@ public interface ProductService {
 
     Optional<ProductResponseDTO> update(Long id, ProductRequestDTO productRequestDTO);
 
-    Optional<ProductResponseDTO> get(Long id);
+    Optional<ProductResponseDTO> getByid(Long id);
+
+    List<ProductResponseDTO> getByPriceLessThan(double price);
 
     boolean delete(Long id);
 }
